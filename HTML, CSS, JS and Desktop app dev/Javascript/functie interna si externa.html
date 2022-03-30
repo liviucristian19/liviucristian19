@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Demo HTML page</title>
+	<style type="text/css">
+		
+
+	</style>
+</head>
+<body>
+	 <script type="text/javascript">
+
+ function substractSquares(a,b){
+
+var r =30;
+
+ 	function square(x){
+ 		return x*x;
+ 	}
+ 	return square(a) - square(b);
+ }
+ console.log(substractSquares(6,5));
+ // sau
+ console.log(square(4)); 
+ console.log(r);
+
+
+
+ function iterate(){
+ 	var counter = 0;
+
+function increment(){   //closure
+	return counter++;
+}
+
+ 	return increment;
+ }
+ counter++;
+
+ var incrementFromOutside = iterate();
+
+ console.log(incrementFromOutside());
+ console.log(incrementFromOutside());
+ console.log(incrementFromOutside());
+
+
+
+
+
+ function myFunction(x){
+ 	return x*x;
+ }
+ //myFunction(6);
+console.log(myFunction(6));  //36
+
+
+
+console.log(x);
+var x; //undefined
+
+
+
+
+
+
+
+	 </script>
+
+</body>
+</html>

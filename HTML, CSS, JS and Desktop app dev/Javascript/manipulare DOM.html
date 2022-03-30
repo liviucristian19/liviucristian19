@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Demo HTML page</title>
+<style type="text/css">
+	 .blue-text{
+    color: blue;
+   }
+
+</style>
+
+</head>
+<body>
+
+    <p id="p_1"> Text 1</p>
+
+  <div id="div_1">
+  	
+ 
+  	<p id="p_2"> Text 2</p>
+    <p> Text 3</p>
+    <p class="some_class"> Text 4</p>
+    <p class="some_class"> Text 5</p>
+  </div>
+
+ <ul id="my-list">
+ 	
+ 	<li>Item 1</li>
+ 	<li>Item 2</li>
+ 	<li>Item 3</li>
+ </ul>
+
+ <input type="text" name="firstname" id="first-name" value="I want to be a button">
+
+  <script type="text/javascript">
+
+
+   var newParagraph = document.createElement("p");
+ //creez continut
+ var newContent = document.createTextNode("This is dynamically generated paragraph");
+ newParagraph.appendChild(newContent);
+ //document.body.appendChild(newParagraph); 
+
+var oldParagraph = document.getElementById("p_1");
+document.body.replaceChild(newParagraph,oldParagraph);
+
+
+  </script>
+
+
+</body>
+</html>

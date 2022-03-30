@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Main">
+  <grid id="27dc6" binding="mainPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="line" title-justification="2" title-position="4">
+      <font name="Roboto Thin" size="22" style="3"/>
+      <title-color color="-4512992"/>
+      <color color="-9541189"/>
+    </border>
+    <children>
+      <component id="af9d9" class="javax.swing.JButton" binding="myButton">
+        <constraints/>
+        <properties>
+          <enabled value="true"/>
+          <text value="my button"/>
+        </properties>
+      </component>
+      <component id="7385" class="javax.swing.JButton" binding="button1" default-binding="true">
+        <constraints/>
+        <properties>
+          <text value="Button"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

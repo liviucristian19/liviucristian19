@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Demo HTML page</title>
+	<style type="text/css">
+		
+
+	</style>
+</head>
+<body>
+	 <script type="text/javascript">
+
+ var make = "Audi";
+ var model = "A5";
+ var weight = 1530;
+ var colour = "blue";
+
+  var car = {make:"Audi", model:"A5", weight=1450, colour:"blue"};
+ 
+  console.log(car.model);
+
+
+
+//creez un obiect in alt mod
+ var car = new Object();
+ car.make="Audi";
+ car.model="A5";
+ car.weight=1450;
+ car.colour="blue";
+
+
+//al treilea mod = cu constructor de obiect
+
+ function car(make,model,weight,colour){
+    this.make=make;
+    this.model=model;
+    this.weight=weight;
+    this.colour=colour;
+ }
+
+ // creez o functie //o variablia startengine si ii atribui o functie anomima
+
+this.startEngine = function(){
+	return "Engine of " + this.model + " " + this.model + " is stated."
+}
+
+
+
+//creez mai multe obiecte cu aceleasi proprietati
+ var car1 = new car("Audi","A5",1450,"blue");
+
+ var car2 = new car("BMW","M3",1440,"red");
+ console.log(car1.model);
+ console.log(car2.model);
+
+// obiectele au proprietati si metode(functii)
+
+console.log(car1.startEngine());
+
+
+
+// creez prototype pentru a scrie metoda startengine
+
+car.prototype.startEngine = function(){
+	return "Engine of " + this.model + " " + this.model + " is started."
+}
+
+
+
+
+
+
+
+
+
+var Person = function(firstName, lastName, age){
+  this.firstName=firstName;
+  this.lastName=lastName;
+  this.age=age;
+
+Person.prototype.info = function(){
+  return this.firstName + " " + this.lastName;
+}
+
+var Student = function(firstName, lastName, age, university){
+  Person.call(this, firstName,lastName,age); // mosteneste person; se suprascrie
+  this.university=university;
+}
+// prototype=mecanism de baza al mostenirii
+ Student.prototype = Object.create(Person.prototype); // creez mostenirea intre obiecte
+ Student.prototype.constructor = Student; // am creat relatie de mostenire
+// redefinesc metoda info(+universitatea)
+Student.prototype.info = function(){
+	return this.firstName + " " + this.lastName + ", from University " 
+	+ this.university;
+}
+
+ var Student1 = new Student("Liviu", "Cristian", 22, "UPB");
+ console.log(Student1.info());
+
+
+var person1 = new Person("Ion", "Ion", 56);
+console.log(person1.info());
+
+
+
+	 </script>
+
+</body>
+</html>

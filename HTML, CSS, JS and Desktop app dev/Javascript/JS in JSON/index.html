@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Demo HTML page</title>
+<style type="text/css">
+	
+
+</style>
+
+</head>
+<body>
+    <h2>Javascript Demo</h2>
+  <button type="button" id="getBtn">Get Content</button>
+    <div id="contentContainer"></div> 
+
+
+   <script type="text/javascript">
+
+   window.onload = function(){
+     var button = document.getElementById("getBtn");
+     //adaug event listener pentru click event; la click event se va activa o functie anonima
+    button.addEventListener("click", function(){
+
+ var person = {
+   firstName: "Ben";
+   lastName: "Hur";
+   hairColor: "black";
+   eyeColor: "blue";
+
+ };
+
+ var jsonPerson = JSON.stringify(person);
+ console.log("Person in JSON format: " + jsonPerson);
+
+
+//       //creez obiect
+//        var xhttp = new XMLHttpRequest(); //se trimite cereri serverului din JS
+
+//        xhttp.onreadystatechange = function(){
+//         if(xhttp.readyState == 4 && xhttp.status ==200){
+
+//     var jSonPerson = JSON.parse(xhttp.responseText); //parsare date textuale in format JSON
+// document.getElementById("contentContainer").innerHTML = "First name: " + jSonPerson.firstName + "<br>" + "Last name: " + jSonPerson.lastName + "<br>" + "Hair color: " + jSonPerson.hairColor;
+
+
+//           document.getElementById("contentContainer").innerHTML = xhttp.responseText ;
+//         }
+//        }
+//      xhttp.open("GET", "content.json", true);
+//      xhttp.send();
+    });
+
+   }
+
+  </script>
+
+</body>
+</html>

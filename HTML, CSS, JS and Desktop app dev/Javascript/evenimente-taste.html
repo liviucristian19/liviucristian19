@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Demo HTML page</title>
+<style type="text/css">
+	
+
+</style>
+
+</head>
+<body>
+
+<a id="the-link" href="http://www.google.com">Google</a>
+
+  <script type="text/javascript">
+
+   // document.addEventListener("keydown", logKey);
+
+   // function logKey(e){
+   //  console.log(e.ley);
+   // }
+
+ var link = document.getElementById("the-link");
+// functie eventhandler-la cllick pe element
+link.addEventListener("click", preventDefaultEvent);
+
+ function preventDefaultEvent(e){
+    e.preventDefault();
+    console.log("Default event is prevented!");
+ }
+
+
+
+  </script>
+
+
+</body>
+</html>

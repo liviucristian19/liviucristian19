@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Demo HTML page</title>
+	<style type="text/css">
+		
+
+	</style>
+</head>
+<body>
+	 <script type="text/javascript">
+
+var a = function (a,b) {     //functie anonima
+ 	var result = a*b;
+ 	return result;
+ }
+ console.log(a(5,5));
+
+
+
+//creez alta functie
+ function doSomeStuff(a,b){
+ 	if(a==13){
+ 		b(a);
+ 	}
+ }
+
+ doSomeStuff(13,function(num){
+ 	console.log(num + " is not allowed!");
+ });
+
+
+// functie de autoapelare
+
+(function(){
+
+	console.log("Hello from self-invoking function!")
+}) ();
+
+// functie obisnuita
+
+function(myFunction){
+   var x=4; }
+	console.log("Hello from self-invoking function!");
+
+
+
+
+var x =4;
+function myFunction(){
+	console.log(x);
+
+}
+myFunction();
+
+
+
+
+
+
+function myFunction(){
+	x =4; //variabila globala
+}
+myFunction();
+console.log(x);
+
+
+
+
+
+	 </script>
+
+</body>
+</html>

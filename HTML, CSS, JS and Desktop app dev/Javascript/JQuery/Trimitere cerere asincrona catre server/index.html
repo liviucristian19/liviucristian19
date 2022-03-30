@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Demo HTML page</title>
+
+  <style type="text/css">
+  	
+
+  </style>
+<script type="text/javascript" src="jquery-3.6.0.js"> 
+
+	 </script>
+
+</head>
+<body>
+
+	 
+	 <h1>This is heading</h1>
+     <p id="the-paragraph">This is paragraph.</p>
+     <p class="some-class">This is another paragraph.</p>
+
+ <div id="contentContainer">
+    
+
+ </div>
+	
+    <script type="text/javascript">
+ 
+   $(document).ready(function(){  //functie anonima
+ 
+      // $.ajax({
+      //   url: "plain_text.txt";
+      //   type: "GET",
+      //   dataType: "text";
+      //   success: function(result){
+      //     $("#contentContainer").html(result);
+      //   }
+
+      // });
+
+            $.ajax({
+        url: "content.json";
+        type: "GET",
+        dataType: "text";
+        success: function(result){
+
+         var json = JQuery.parseJSON(result);
+  
+          $("#contentContainer").html(json.firstName);
+        }
+
+      });
+
+
+   }); //se executa cand documentul DOM devine disponibil
+
+
+
+    </script>
+
+
+</body>
+</html>
